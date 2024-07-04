@@ -56,8 +56,11 @@ public class AirField {
 		
 	}
 
-	private void removeJetFromFleet() {
+	private void removeJetFromFleet(Scanner kb) {
 
+		System.out.println("Select the number of the jet that you would like to remove: ");
+		listFleet();
+		int removeIndex = kb.nextInt();
 	}
 
 	/*
@@ -74,5 +77,43 @@ public class AirField {
 	private void viewJetLongestRange() {
 
 	}
+	
+	// UNSURE IF THESE BELONG, review interfaces & instanceof & implements**************************************
+	/*
+	 * The user is presented with an option specific to the interfaces you created. 
+	 * For example, Load all Cargo Jets, above, finds all implementors of the CargoCarrier interface and 
+	 * then calls loadCargo() on each.
+	 */
+	
+	public void loadAllCargo() {
+		// for each JET of JETS
+		for(Jet jet : jets) {
+			// and if JET is an instance of Cargo
+			if (jet instanceof CargoCarrier) {
+				// then calls loadCargo onto all implementors of CargoCarrier
+				((CargoCarrier) jet).loadCargo();
+			}
+		}
+	}
+	
+	public void dogfight() {
+		
+		for(Jet jet : jets) {
+			if (jet instanceof CombatReady) {
+				((CombatReady) jet).fight();
+			}
+		}
+	}
+	
+	// UNSURE IF THESE BELONG, review interfaces & instanceof & implements**************************************
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
