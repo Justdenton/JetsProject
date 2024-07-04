@@ -1,7 +1,6 @@
 package com.skilldistillery.jets;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class AirField {
 
@@ -11,8 +10,7 @@ public class AirField {
 
 	public AirField() {
 		jets = new ArrayList<>();
-		// Create 5 different jet objects.
-		// Add them to list.
+		
 		jets.add(new PassengerJet("PassengerModelOne", 500, 5000, 500000000));
 		
 		jets.add(new CargoPlane("CargoModelOne", 600, 6000, 600000000));
@@ -28,12 +26,20 @@ public class AirField {
 	// it to the list
 	// send jet to airfield (airfield adds to list) - encapsulation
 
+	/*
 	private void listFleet() {
 		for (Jet jet : jets) {
 			System.out.println(jet);	// User Story 5
 		}
 	}
-
+	*/
+	private void listFleet() {
+		for (int i = 0; i < jets.size(); i++) {
+			
+		}
+	}
+	
+	
 	private void flyAllJets() {
 		for (Jet jet : jets) {
 			jet.fly();
@@ -85,7 +91,7 @@ public class AirField {
 	 * then calls loadCargo() on each.
 	 */
 	
-	public void loadAllCargo() {
+	private void loadAllCargo() {
 		// for each JET of JETS
 		for(Jet jet : jets) {
 			// and if JET is an instance of Cargo
