@@ -66,7 +66,7 @@ public class JetsApp {
 			// price.
 			// And it is added to the AirField.
 			case 7:
-				airfield.addJetToFleet(kb);
+				airfield.addJetToFleet(Scanner kb);
 				break;
 
 		// A user can remove a jet from the fleet.

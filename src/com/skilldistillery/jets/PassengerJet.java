@@ -6,7 +6,7 @@ public class PassengerJet extends Jet {
 		super(model, speed, range, price);
 	}
 
-	
+// Indicates that a method declaration is intended to override a method declaration in a supertype.	
 	@Override
 	public void fly() {
 
@@ -14,7 +14,4 @@ public class PassengerJet extends Jet {
 		
 	}
 
-	
-	
-	
 }
