@@ -1,6 +1,7 @@
 package com.skilldistillery.jets;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AirField {
 
@@ -19,10 +20,6 @@ public class AirField {
 		
 		jets.add(new FighterJet("FighterModelOne", 800, 8000, 800000000));
 		jets.add(new FighterJet("FighterModelTwo", 900, 9000, 900000000));
-		
-		
-		
-		
 	}
 
 	// Do NOT create a getJets() method.
@@ -32,15 +29,31 @@ public class AirField {
 	// send jet to airfield (airfield adds to list) - encapsulation
 
 	private void listFleet() {
-
+		for (Jet jet : jets) {
+			System.out.println(jet);	// User Story 5
+		}
 	}
 
 	private void flyAllJets() {
-
+		for (Jet jet : jets) {
+			jet.fly();
+		}
 	}
 
-	private void addJetToFleet() {
-
+	private void addJetToFleet(Scanner kb) { // AIRFIELD CANT HAVE ANY ADDITIONAL FIELDS - what to do with kb
+																		//public vs private
+		System.out.println("Please enter the model: ");					// is importing kb into this OK?
+		String model = kb.next();
+		
+		System.out.println("Please enter the speed, in MPH: ");
+		double speed = kb.nextDouble();
+		
+		System.out.println("Please enter the range, in miles: ");
+		int range = kb.nextInt();
+		
+		System.out.println("Please enter the price: ");
+		long price = kb.nextLong();
+		
 	}
 
 	private void removeJetFromFleet() {
