@@ -6,11 +6,10 @@ public class PassengerJet extends Jet {
 		super(model, speed, range, price);
 	}
 
-// Indicates that a method declaration is intended to override a method declaration in a supertype.	
 	@Override
 	public void fly() {
 
-		System.out.println(" " + getModel() + " " + getSpeed() + " " + getRange() / getSpeed() + " ");
+		System.out.println("Passenger Jet: " + getModel() + "is flying " + getSpeed() + "MPH for " + getRange() / getSpeed() + " ");
 		
 	}
 

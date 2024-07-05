@@ -7,19 +7,17 @@ public class FighterJet extends Jet implements CombatReady {
 		super(model, speed, range, price);
 	}
 
-// Indicates that a method declaration is intended to override a method declaration in a supertype.	
 	@Override
 	public void fly() {
 
-		System.out.println(" " + getModel() + " " + getSpeed() + " " + getRange() / getSpeed() + " ");
+		System.out.println("Fighter Jet: " + getModel() + "is flying " + getSpeed() + "MPH for " + getRange() / getSpeed() + " ");
 		
 	}
 	
-// Indicates that a method declaration is intended to override a method declaration in a supertype.	
 	@Override
 	public void fight() {
 		
-		System.out.println(" " + getModel() + " ");
+		fight();
 		
 	}
 

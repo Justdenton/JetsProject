@@ -1,8 +1,12 @@
 package com.skilldistillery.jets;
 
 public interface CargoCarrier {
-	// PUBLIC & ABSRACT
-	void loadCargo();
-	
+
+	void loadCargo() {
+		
+		System.out.println("LOADING CARGO!");
+
+	}
+		
 	
 }

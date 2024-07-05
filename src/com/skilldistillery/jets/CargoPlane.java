@@ -7,19 +7,16 @@ public class CargoPlane extends Jet implements CargoCarrier {
 		super(model, speed, range, price);
 	}
 
-// Indicates that a method declaration is intended to override a method declaration in a supertype.	
 	@Override
 	public void fly() {
 		
-		System.out.println(" " + getModel() + " " + getSpeed() + " " + getRange() / getSpeed() + " ");
+		System.out.println("Cargo Plane: " + getModel() + "is flying " + getSpeed() + "MPH for " + getRange() / getSpeed() + " ");
 
 	}
 
-// Indicates that a method declaration is intended to override a method declaration in a supertype.	
 	@Override
 	public void loadCargo() {
-
-		System.out.println(" " + getModel() + " " );
+		// TODO Auto-generated method stub
 		
 	}
 

@@ -1,7 +1,7 @@
 package com.skilldistillery.jets;
 
 public abstract class Jet {
-	// FIELDS
+
 	private String model;
 	private double speed;
 	private int range;
@@ -23,7 +23,7 @@ public abstract class Jet {
 	// TO STRING
 	@Override //?
 	public String toString() {
-		return "[model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
+		return "Model: " + model + ", Speed: " + speed + ", Range: " + range + ", Price: " + price;
 	}
 	
 	

@@ -6,7 +6,7 @@ public class AirField {
 
 	// THIS CLASS CANNOT HAVE ANY ADDITIONAL FIELDS
 
-	private ArrayList<Jet> jets; // User Story 2
+	private ArrayList<Jet> jets; 
 
 	public AirField() {
 		jets = new ArrayList<>();
@@ -20,12 +20,6 @@ public class AirField {
 		jets.add(new FighterJet("FighterModelTwo", 900, 9000, 900000000));
 	}
 
-	// Do NOT create a getJets() method.
-
-	// add jet method that accepts an argument for a jet and adds
-	// it to the list
-	// send jet to airfield (airfield adds to list) - encapsulation
-
 	/*
 	private void listFleet() {
 		for (Jet jet : jets) {
@@ -33,12 +27,12 @@ public class AirField {
 		}
 	}
 	*/
+	
 	private void listFleet() {
 		for (int i = 0; i < jets.size(); i++) {
-			
+			System.out.println((i + 1) + " : " + jets.get(i));
 		}
 	}
-	
 	
 	private void flyAllJets() {
 		for (Jet jet : jets) {
@@ -46,50 +40,56 @@ public class AirField {
 		}
 	}
 
-	private void addJetToFleet(Scanner kb) { // AIRFIELD CANT HAVE ANY ADDITIONAL FIELDS - what to do with kb
-																		//public vs private
-		System.out.println("Please enter the model: ");					// is importing kb into this OK?
-		String model = kb.next();
+	private void addJetToFleet(String model, double speed, int range, long price, int type) { 
+	
+		Jet newJet;
 		
-		System.out.println("Please enter the speed, in MPH: ");
-		double speed = kb.nextDouble();
+		switch (type) {
 		
-		System.out.println("Please enter the range, in miles: ");
-		int range = kb.nextInt();
+		case 1: 
+			newJet = new PassengerJet (model, speed, range, price);
+			break;
+		case 2: 
+			newJet = new FighterJet (model, speed, range, price);
+			break;
+		case 3: 
+			newJet = new CargoPlane (model, speed, range, price);
+			break;
+		default:
+			System.out.println("Invalid type! (check user stories)");
+			newJet = new 
 		
-		System.out.println("Please enter the price: ");
-		long price = kb.nextLong();
+		}
+		
+		jets.add(newJet);
+		System.out.println("Plane added!");
 		
 	}
 
-	private void removeJetFromFleet(Scanner kb) {
+	private void removeJetFromFleet(int indexJA) {
 
-		System.out.println("Select the number of the jet that you would like to remove: ");
-		listFleet();
-		int removeIndex = kb.nextInt();
+		if (indexJA > 0 && indexJA <= jets.size()) {
+			jets.remove(indexJA - 1);
+			System.out.println("Plane removed!");
+		} else {
+			System.out.println("Invalid!");
+		}
+		
 	}
 
-	/*
-	 * The view fastest jet and longest range options both display: the jet's model,
-	 * speed (in MPH), range, and price.
-	 * 
-	 * NOTE: These methods must search the collection of jets to find the
-	 * appropriate jet.
-	 */
+/*
+ * The view fastest jet and longest range options both display: the jet's model, speed (in MPH), range, and price.
+ * NOTE: These methods must search the collection of jets to find the appropriate jet.
+ */
+	
 	private void viewFastestJet() {
+		
 
 	}
 
 	private void viewJetLongestRange() {
 
 	}
-	
-	// UNSURE IF THESE BELONG, review interfaces & instanceof & implements**************************************
-	/*
-	 * The user is presented with an option specific to the interfaces you created. 
-	 * For example, Load all Cargo Jets, above, finds all implementors of the CargoCarrier interface and 
-	 * then calls loadCargo() on each.
-	 */
 	
 	private void loadAllCargo() {
 		// for each JET of JETS
@@ -111,15 +111,4 @@ public class AirField {
 		}
 	}
 	
-	// UNSURE IF THESE BELONG, review interfaces & instanceof & implements**************************************
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

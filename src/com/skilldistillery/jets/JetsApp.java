@@ -1,6 +1,7 @@
 package com.skilldistillery.jets;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class JetsApp {
 
@@ -8,20 +9,17 @@ public class JetsApp {
 	private AirField airfield = new AirField();
 	private Scanner kb = new Scanner(System.in);
 
-	public static void main(String[] args) { // User Story 1
+	public static void main(String[] args) { 
 
 		JetsApp ja = new JetsApp();
 		ja.launchApp();
 	}
 
-	// launchApp ***********************************************************
 	private void launchApp() {
 
-		// The program continues until the user selects the option number to Quit, which
-		// exits the program.
 		int choice = 0;
 		
-		while (choice != 9) {	// User Story 11
+		while (choice != 9) {	
 			displayUserMenu();
 			choice = kb.nextInt();
 
@@ -93,6 +91,8 @@ public class JetsApp {
 		
 		System.out.println("Select the type of jet: (1) Passenger Jet (2) Fighter Jet (3) Cargo Plane");
 		int type = kb.nextInt();
+		
+		airfield.addJetToFleet(model, speed, range, price, type);
 		
 	}
 	
