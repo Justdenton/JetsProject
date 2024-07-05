@@ -8,6 +8,7 @@ public class JetsApp {
 	private AirField airfield = new AirField();
 	private Scanner kb = new Scanner(System.in);
 
+	// User Story 1
 	public static void main(String[] args) { 
 
 		JetsApp ja = new JetsApp();
@@ -18,6 +19,8 @@ public class JetsApp {
 
 		int choice = 0;
 		
+		// // User Story 11 
+		// ( loop condition "!= 9" keeps the program active until user chooses to quit.
 		while (choice != 9) {	
 			displayUserMenu();
 			choice = kb.nextInt();
@@ -36,11 +39,11 @@ public class JetsApp {
 				airfield.viewJetLongestRange();
 				break;
 			case 5:
-			// Load all Cargo Jets (only CargoPlane) - user added tested and functional.
+			// (only CargoPlane) - ADDED tested and functional.
 				airfield.loadAllCargo();
 				break;
 			case 6:
-			// Dogfight! (only FighterJet) - user added fighterjet tested and functional. 
+			// (only FighterJet) - ADDED tested and functional. 
 				airfield.dogfight();
 				break;
 			case 7:
@@ -58,12 +61,13 @@ public class JetsApp {
 			}
 		}
 		
-		kb.close(); // Need to test to make sure this belongs here
+		kb.close(); // Close here since no longer opening 2nd kb (bad form).
 		
 	}
 
+	// User Story 4
 	private void displayUserMenu() {
-		System.out.println(); // SPACING
+		System.out.println(); // SPACING - - - Could make box around menu instead of empty line.
 		System.out.println("Please make a selection: ");
 		System.out.println("1. List fleet.");
 		System.out.println("2. Fly all jets.");

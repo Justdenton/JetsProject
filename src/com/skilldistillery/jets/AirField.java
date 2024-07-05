@@ -6,11 +6,12 @@ public class AirField {
 
 	// THIS CLASS CANNOT HAVE ANY ADDITIONAL FIELDS
 
+	// User Story 2 (ArrayList)
 	private ArrayList<Jet> jets; 
 
 	public AirField() {
 		jets = new ArrayList<>();
-		
+		// User Story 3 (5 below)
 		jets.add(new PassengerJet("PassengerModelOne", 500, 5000, 500000000));
 		
 		jets.add(new CargoPlane("CargoModelOne", 600, 6000, 600000000));
@@ -20,18 +21,22 @@ public class AirField {
 		jets.add(new FighterJet("FighterModelTwo", 900, 9000, 900000000));
 	}
 
+	// User Story 5 ( method called from JetsApp launchApp() ) 
 	public void listFleet() {
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println((i + 1) + " : " + jets.get(i));
 		}
 	}
-	
+	// User Story 6 (3 subclasses of Jet use Override)
 	public void flyAllJets() {
 		for (Jet jet : jets) {
 			jet.fly();
 		}
 	}
 
+	// User Story 9 ( method called from JetsApp addJetToFleet() ) 
+	// kb user inputs pass through (Stretch Goal completed in above () )
+		// switch (type) knows where to store the newly added jet. 
 	public void addJetToFleet(String model, double speed, int range, long price, int type) { 
 	
 		Jet newJet;
@@ -57,6 +62,8 @@ public class AirField {
 		
 	}
 
+	// User Story 10 ( method called from JetsApp removeJetFromFleet() ) 
+	// indexJA allows user to select by inputting the number.
 	public void removeJetFromFleet(int indexJA) {
 
 		if (indexJA > 0 && indexJA <= jets.size()) {
@@ -67,10 +74,7 @@ public class AirField {
 		}
 	}
 
-/*
- * NOTE: These methods must search the collection of jets to find the appropriate jet. (fast/long)
- */
-	
+	// User Story 7 ( fastest() & longest() )
 	public void viewFastestJet() {
 		
 		Jet fastestJet = jets.get(0);
@@ -97,6 +101,8 @@ public class AirField {
 		
 	}
 	
+	// User Story 8 ( loadAllCargo() & dog fight() )
+	// Option specific to their interface (finds all IMPLEMENTORS of interface & calls method)
 	public void loadAllCargo() {
 		// for each JET of JETS
 		for(Jet jet : jets) {
