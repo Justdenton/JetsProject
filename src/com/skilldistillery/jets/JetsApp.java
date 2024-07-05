@@ -36,11 +36,11 @@ public class JetsApp {
 				airfield.viewJetLongestRange();
 				break;
 			case 5:
-			// Load all Cargo Jets (only CargoPlane)
+			// Load all Cargo Jets (only CargoPlane) - user added tested and functional.
 				airfield.loadAllCargo();
 				break;
 			case 6:
-			// Dogfight! (only FighterJet)
+			// Dogfight! (only FighterJet) - user added fighterjet tested and functional. 
 				airfield.dogfight();
 				break;
 			case 7:
@@ -55,9 +55,11 @@ public class JetsApp {
 
 			default:
 				System.out.println("Invalid entry, please try again!");
-
 			}
 		}
+		
+		kb.close(); // Need to test to make sure this belongs here
+		
 	}
 
 	private void displayUserMenu() {
@@ -94,7 +96,6 @@ public class JetsApp {
 		int type = kb.nextInt();
 		
 		airfield.addJetToFleet(model, speed, range, price, type);
-		
 	}
 	
 	private void removeJetFromFleet() {
@@ -104,5 +105,4 @@ public class JetsApp {
 		int indexJA = kb.nextInt();
 		airfield.removeJetFromFleet(indexJA);
 	}	
-	
 }

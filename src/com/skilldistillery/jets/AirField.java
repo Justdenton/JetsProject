@@ -68,8 +68,7 @@ public class AirField {
 	}
 
 /*
- * The view fastest jet and longest range options both display: the jet's model, speed (in MPH), range, and price.
- * NOTE: These methods must search the collection of jets to find the appropriate jet.
+ * NOTE: These methods must search the collection of jets to find the appropriate jet. (fast/long)
  */
 	
 	public void viewFastestJet() {
