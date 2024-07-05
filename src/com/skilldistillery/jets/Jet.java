@@ -23,7 +23,7 @@ public abstract class Jet {
 	// TO STRING
 	@Override //?
 	public String toString() {
-		return "Model: " + model + "|| Speed: " + speed + "MPH || Range: " + range + " miles || Price: $" + price;
+		return "Model: " + model + " || Speed: " + speed + " MPH || Range: " + range + " miles || Price: $" + price;
 	}
 	
 	

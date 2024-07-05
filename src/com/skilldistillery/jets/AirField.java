@@ -19,6 +19,8 @@ public class AirField {
 		
 		jets.add(new FighterJet("FighterModelOne", 800, 8000, 800000000));
 		jets.add(new FighterJet("FighterModelTwo", 900, 9000, 900000000));
+		jets.add(new FighterJet("FighterModelThreeTESTsamespeed", 900, 9100, 910000000));
+		jets.add(new FighterJet("FighterModelThreeTESTsamesRANGE", 901, 9100, 910000000));
 	}
 
 	// User Story 5 ( method called from JetsApp launchApp() ) 
