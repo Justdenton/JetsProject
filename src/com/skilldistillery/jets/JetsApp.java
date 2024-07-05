@@ -1,7 +1,6 @@
 package com.skilldistillery.jets;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class JetsApp {
 
@@ -38,11 +37,12 @@ public class JetsApp {
 				break;
 			case 5:
 			// Load all Cargo Jets (only CargoPlane)
-				airfield.loadAllCargoJets();
+				airfield.loadAllCargo();
 				break;
 			case 6:
 			// Dogfight! (only FighterJet)
-				airfield.dogFight();
+				airfield.dogfight();
+				break;
 			case 7:
 				addJetToFleet();
 				break;
@@ -61,6 +61,7 @@ public class JetsApp {
 	}
 
 	private void displayUserMenu() {
+		System.out.println(); // SPACING
 		System.out.println("Please make a selection: ");
 		System.out.println("1. List fleet.");
 		System.out.println("2. Fly all jets.");
@@ -71,6 +72,7 @@ public class JetsApp {
 		System.out.println("7. Add a jet to Fleet.");
 		System.out.println("8. Remove a jet from Fleet.");
 		System.out.println("9. Quit.");
+		System.out.println(); // SPACING
 	}
 	
 	// Pass scanner inputs into AirField (instead of opening 2nd scanner in AirField)

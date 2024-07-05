@@ -8,14 +8,15 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	public void fly() {
-		System.out.println("Fighter Jet: " + getModel() + "is flying " + getSpeed() + "MPH for " + getRange() / getSpeed() + " ");
+		System.out.println("Fighter Jet: " + getModel() + "is flying " + getSpeed() + "MPH for " + getRange() / getSpeed() + " hours.");
 		
 	}
 	
 	@Override
 	public void fight() {
-		CombatReady.super.fight();
 		
+		System.out.println(getModel() + " is commencing dog fight!");
+		// Should print "COMMENCING DOG FIGHT!" 
 	}
 
 }

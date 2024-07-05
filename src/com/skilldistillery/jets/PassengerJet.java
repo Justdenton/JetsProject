@@ -9,7 +9,7 @@ public class PassengerJet extends Jet {
 	@Override
 	public void fly() {
 
-		System.out.println("Passenger Jet: " + getModel() + "is flying " + getSpeed() + "MPH for " + getRange() / getSpeed() + " ");
+		System.out.println("Passenger Jet: " + getModel() + "is flying " + getSpeed() + "MPH for " + getRange() / getSpeed() + " hours.");
 		
 	}
 

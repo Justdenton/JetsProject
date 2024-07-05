@@ -20,19 +20,19 @@ public class AirField {
 		jets.add(new FighterJet("FighterModelTwo", 900, 9000, 900000000));
 	}
 
-	private void listFleet() {
+	public void listFleet() {
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println((i + 1) + " : " + jets.get(i));
 		}
 	}
 	
-	private void flyAllJets() {
+	public void flyAllJets() {
 		for (Jet jet : jets) {
 			jet.fly();
 		}
 	}
 
-	private void addJetToFleet(String model, double speed, int range, long price, int type) { 
+	public void addJetToFleet(String model, double speed, int range, long price, int type) { 
 	
 		Jet newJet;
 		
@@ -57,7 +57,7 @@ public class AirField {
 		
 	}
 
-	private void removeJetFromFleet(int indexJA) {
+	public void removeJetFromFleet(int indexJA) {
 
 		if (indexJA > 0 && indexJA <= jets.size()) {
 			jets.remove(indexJA - 1);
@@ -72,11 +72,11 @@ public class AirField {
  * NOTE: These methods must search the collection of jets to find the appropriate jet.
  */
 	
-	private void viewFastestJet() {
+	public void viewFastestJet() {
 		
 		Jet fastestJet = jets.get(0);
 		for (Jet jet : jets) {
-			if (jet.getspeed() > fastestJet.getSpeed()) {
+			if (jet.getSpeed() > fastestJet.getSpeed()) {
 				fastestJet = jet;
 			}
 		}
@@ -85,7 +85,7 @@ public class AirField {
 
 	}
 
-	private void viewJetLongestRange() {
+	public void viewJetLongestRange() {
 		
 		Jet longestRangeJet = jets.get(0);
 		for (Jet jet : jets) {
@@ -98,7 +98,7 @@ public class AirField {
 		
 	}
 	
-	private void loadAllCargo() {
+	public void loadAllCargo() {
 		// for each JET of JETS
 		for(Jet jet : jets) {
 			// and if JET is an instance of Cargo
