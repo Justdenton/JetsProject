@@ -3,21 +3,18 @@ package com.skilldistillery.jets;
 public class FighterJet extends Jet implements CombatReady {
 
 	public FighterJet(String model, double speed, int range, long price) {
-		
 		super(model, speed, range, price);
 	}
 
 	@Override
 	public void fly() {
-
 		System.out.println("Fighter Jet: " + getModel() + "is flying " + getSpeed() + "MPH for " + getRange() / getSpeed() + " ");
 		
 	}
 	
 	@Override
 	public void fight() {
-		
-		fight();
+		CombatReady.super.fight();
 		
 	}
 

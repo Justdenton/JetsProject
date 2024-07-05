@@ -49,7 +49,6 @@ public class JetsApp {
 			case 8:
 				removeJetFromFleet();
 				break;
-
 			case 9:
 				System.out.println("You have chosen to quit. Goodbye!");
 				break;

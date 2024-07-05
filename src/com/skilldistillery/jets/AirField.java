@@ -20,14 +20,6 @@ public class AirField {
 		jets.add(new FighterJet("FighterModelTwo", 900, 9000, 900000000));
 	}
 
-	/*
-	private void listFleet() {
-		for (Jet jet : jets) {
-			System.out.println(jet);	// User Story 5
-		}
-	}
-	*/
-	
 	private void listFleet() {
 		for (int i = 0; i < jets.size(); i++) {
 			System.out.println((i + 1) + " : " + jets.get(i));
@@ -56,13 +48,12 @@ public class AirField {
 			newJet = new CargoPlane (model, speed, range, price);
 			break;
 		default:
-			System.out.println("Invalid type! (check user stories)");
-			newJet = new 
-		
+			System.out.println("Invalid type! Adding as Passenger Jet.");
+			newJet = new PassengerJet(model, speed, range, price);
 		}
 		
 		jets.add(newJet);
-		System.out.println("Plane added!");
+		System.out.println("Jet added!");
 		
 	}
 
@@ -72,9 +63,8 @@ public class AirField {
 			jets.remove(indexJA - 1);
 			System.out.println("Plane removed!");
 		} else {
-			System.out.println("Invalid!");
+			System.out.println("Invalid selection!");
 		}
-		
 	}
 
 /*
@@ -84,11 +74,28 @@ public class AirField {
 	
 	private void viewFastestJet() {
 		
+		Jet fastestJet = jets.get(0);
+		for (Jet jet : jets) {
+			if (jet.getspeed() > fastestJet.getSpeed()) {
+				fastestJet = jet;
+			}
+		}
+		
+		System.out.println("Fastest jet: " + fastestJet);
 
 	}
 
 	private void viewJetLongestRange() {
+		
+		Jet longestRangeJet = jets.get(0);
+		for (Jet jet : jets) {
+			if (jet.getRange() > longestRangeJet.getRange()) {
+				longestRangeJet = jet; 
+			}
+		}
 
+		System.out.println("Jet with the longest range: " + longestRangeJet);
+		
 	}
 	
 	private void loadAllCargo() {
@@ -110,5 +117,4 @@ public class AirField {
 			}
 		}
 	}
-	
 }

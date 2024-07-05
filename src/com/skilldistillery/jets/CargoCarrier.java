@@ -7,6 +7,5 @@ public interface CargoCarrier {
 		System.out.println("LOADING CARGO!");
 
 	}
-		
 	
 }
