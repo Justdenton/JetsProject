@@ -1,5 +1,7 @@
 package com.skilldistillery.jets;
 
+import java.text.NumberFormat;
+
 public class CargoPlane extends Jet implements CargoCarrier {
 
 	public CargoPlane(String model, double speed, int range, long price) {
@@ -10,8 +12,10 @@ public class CargoPlane extends Jet implements CargoCarrier {
 	@Override
 	public void fly() {
 		
-		System.out.println("Cargo Plane: " + getModel() + " is flying " + getSpeed() + " MPH for " + (double) getRange() / getSpeed() + " hours.");
-		
+		NumberFormat commaFormat = NumberFormat.getInstance();
+		System.out.println("Cargo Plane: " + getModel() + 
+				" is flying " + commaFormat.format(getSpeed()) + " MPH for " + 
+				commaFormat.format(getRange() / getSpeed()) + " hours.");
 	}
 
 	@Override

@@ -67,20 +67,24 @@ public class JetsApp {
 
 	// User Story 4
 	private void displayUserMenu() {
-		System.out.println(); // SPACING - - - Could make box around menu instead of empty line.
-		System.out.println("Please make a selection: ");
-		System.out.println("1. List fleet.");
-		System.out.println("2. Fly all jets.");
-		System.out.println("3. View fastest jet.");
-		System.out.println("4. View jet with longest range.");
-		System.out.println("5. Load all Cargo Jets.");
-		System.out.println("6. Dogfight!");
-		System.out.println("7. Add a jet to Fleet.");
-		System.out.println("8. Remove a jet from Fleet.");
-		System.out.println("9. Quit.");
-		System.out.println(); // SPACING
+		   
+		System.out.printf("%n=========================================%n");
+	    System.out.printf("|         Jets Application Menu         |%n");
+	    System.out.printf("=========================================%n");
+	    System.out.printf("Please make a selection: %n");
+	    System.out.printf("1. List fleet.%n");
+	    System.out.printf("2. Fly all jets.%n");
+	    System.out.printf("3. View fastest jet.%n");
+		System.out.printf("4. View jet with longest range.%n");
+	    System.out.printf("5. Load all Cargo Jets.%n");
+		System.out.printf("6. Dogfight!%n");
+	    System.out.printf("7. Add a jet to Fleet.%n");
+		System.out.printf("8. Remove a jet from Fleet.%n");
+		System.out.printf("9. Quit.%n");
+		System.out.printf("=========================================%n");
+		
 	}
-	
+
 	// Pass scanner inputs into AirField (instead of opening 2nd scanner in AirField)
 	private void addJetToFleet() {
 		

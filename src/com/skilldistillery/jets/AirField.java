@@ -10,6 +10,7 @@ public class AirField {
 	private ArrayList<Jet> jets; 
 
 	public AirField() {
+		
 		jets = new ArrayList<>();
 		// User Story 3 (5 below)
 		jets.add(new PassengerJet("PassengerModelOne", 500, 5000, 500000000));
@@ -19,8 +20,9 @@ public class AirField {
 		
 		jets.add(new FighterJet("FighterModelOne", 800, 8000, 800000000));
 		jets.add(new FighterJet("FighterModelTwo", 900, 9000, 900000000));
-		jets.add(new FighterJet("FighterModelThreeTESTsamespeed", 900, 9100, 910000000));
-		jets.add(new FighterJet("FighterModelThreeTESTsamesRANGE", 901, 9100, 910000000));
+	//	jets.add(new FighterJet("FighterModelThreeTESTsamespeed", 900, 9200, 910000000));
+	//	jets.add(new FighterJet("FighterModelThreeTESTsamesRANGE", 901, 9200, 910000000));
+	
 	}
 
 	// User Story 5 ( method called from JetsApp launchApp() ) 
@@ -81,13 +83,14 @@ public class AirField {
 		
 		Jet fastestJet = jets.get(0);
 		for (Jet jet : jets) {
-			if (jet.getSpeed() > fastestJet.getSpeed()) {
+			if (jet.getSpeed() > fastestJet.getSpeed()) {		
 				fastestJet = jet;
 			}
 		}
 		
 		System.out.println("Fastest jet: " + fastestJet);
-
+		// Addressing ties - not necessary (just be sure to have different speed values at start)
+		// But if were to implement - changing > to >= above only cycles to the end of <>jets 
 	}
 
 	public void viewJetLongestRange() {

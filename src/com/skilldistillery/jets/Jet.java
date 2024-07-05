@@ -1,5 +1,7 @@
 package com.skilldistillery.jets;
 
+import java.text.NumberFormat;
+
 public abstract class Jet {
 
 	private String model;
@@ -23,7 +25,12 @@ public abstract class Jet {
 	// TO STRING
 	@Override //?
 	public String toString() {
-		return "Model: " + model + " || Speed: " + speed + " MPH || Range: " + range + " miles || Price: $" + price;
+		NumberFormat commaFormat = NumberFormat.getInstance();
+		// 
+		return "Model: " + model + 
+				" || Speed: " + commaFormat.format(speed) + 
+				" MPH || Range: " + commaFormat.format(range) + 
+				" miles || Price: $" + commaFormat.format(price);
 	}
 	
 	
