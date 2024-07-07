@@ -36,43 +36,18 @@
 
 ### How to Run:
 
-* 
+* Choose "Run" to begin. Make a selection within the Jets Application Menu.
 
 ### Technologies Used:
 
-*  UML Class diagrams (via Gleek)
+* APIE
 
 ### Lessons Learned: 
 
-*
-
-** ![alt text](image.jpg)      -- UML
+*  
 
 
 
 
-### TO DO:
-
-* FastestJet - 1 output even if 2 jets "tie"
-	* should check for tie? or display all planes that tie? but that could come out to a long list in the future, maybe println "There are 16 jets tied for fastest"?
-	
-* same problem with LongestRange
-
-### STRETCH
-
-* 1) airfield populates with jets read from text file
-* 2) fly individual jet (could start with this one if I have time)
-* 3) pilot	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
