@@ -5,9 +5,7 @@
 ### Overview
 
 * The program simulates several options a user would have if they were in charge of an airfield. See **User Story #4** below for those options. The remaining User Stories further detail how the program should function.
-	* ALSO SEE: Attached UML Class Diagram.
-		* Provided: ![Provided](image.jpg)
-		* Created via Gleek: ![alt text](image.jpg) 
+	
 * User Stories:
 	* **User Story #1:** Create a JetsApplication with a main method to launch your program.  
 	* **User Story #2:** Jets are found at an AirField. Create the AirField class, which has an empty List of Jets.
@@ -44,7 +42,7 @@
 
 ### Lessons Learned: 
 
-*  
+*  Gained familiarity with how ArrayList functions. As well as more practice with using printf and NumberFormat.
 
 
 
