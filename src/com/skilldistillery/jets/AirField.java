@@ -15,11 +15,11 @@ public class AirField {
 		// User Story 3 (5 below)
 		jets.add(new PassengerJet("PassengerModelOne", 500, 5000, 500000000));
 		
-		jets.add(new CargoPlane("CargoModelOne", 600, 6000, 600000000));
-		jets.add(new CargoPlane("CargoModelTwo", 700, 7000, 700000000));
+		jets.add(new CargoPlane("CargoModelOne", 600, 6600, 600000000));
+		jets.add(new CargoPlane("CargoModelTwo", 700, 8400, 700000000));
 		
-		jets.add(new FighterJet("FighterModelOne", 800, 8000, 800000000));
-		jets.add(new FighterJet("FighterModelTwo", 900, 9000, 900000000));
+		jets.add(new FighterJet("FighterModelOne", 800, 10400, 800000000));
+		jets.add(new FighterJet("FighterModelTwo", 900, 12600, 900000000));
 	//	jets.add(new FighterJet("FighterModelThreeTESTsamespeed", 900, 9200, 910000000));
 	//	jets.add(new FighterJet("FighterModelThreeTESTsamesRANGE", 901, 9200, 910000000));
 	
